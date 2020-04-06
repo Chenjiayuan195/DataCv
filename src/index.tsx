@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.less';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import { RoutesMenu } from '@/router/menu'
+import { createApp } from '@/init/createApp'
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.Fragment>
+    {createApp(RoutesMenu)}
+  </React.Fragment>,
   document.getElementById('root')
 );
 
